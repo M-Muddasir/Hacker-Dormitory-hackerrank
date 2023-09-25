@@ -7,15 +7,15 @@ import 'h8k-components';
 
 const title = "Hacker Dormitory";
 function App() {
-  const [residanceList,setResidanceList]=useState([]);
-  const [error,setError]=useState();
+  const [residentsList,setResidanceList]=useState([])
+  const [error,setError]=useState(null);
   return (
     <div className="App">
         <h8k-navbar header={title}></h8k-navbar>
       <div className="layout-column justify-content-center align-items-center w-50 mx-auto">
         <Search setResidanceList={setResidanceList} setError={setError}/>
         <Error error={error}/>
-        <ResidentsList residanceList={residanceList}/>
+        <ResidentsList residentsList={residentsList}/>
       </div>
     </div>
   );
